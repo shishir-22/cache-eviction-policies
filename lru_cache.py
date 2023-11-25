@@ -91,13 +91,9 @@ class LRUCache:
                 del self.hash_map[node_to_be_removed.key]
                 del node_to_be_removed
 
-                # Add the new key and value
-                self.hash_map[key] = Node(key, value)
-                self.__add_next_to_head(self.hash_map[key])
-            else:
-                self.hash_map[key] = Node(key, value)
-                # Add the node next to the head
-                self.__add_next_to_head(self.hash_map[key])
+            # Add the new key and value
+            self.hash_map[key] = Node(key, value)
+            self.__add_next_to_head(self.hash_map[key])
 
 
 # Your LRUCache object will be instantiated and called as such:
